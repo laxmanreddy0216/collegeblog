@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>SBIT</title>
+<link rel="icon" href ="/favicon.ico" type="image/x-icon" /> <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<script type="text/javascript">
+function Warn()
+{
+	alert(" Message Sent Succesfully");
+	document.Write("Message Sent")
+}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<link rel="stylesheet" href="css/w3.css">
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">-->
+<link rel="stylesheet" href="css/gw3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="css/faw3.css">-->
+
+<style>
+blink {
+    -webkit-animation: 1.5s linear infinite condemned_blink_effect; // for android
+    animation: 1.0s linear infinite condemned_blink_effect;
+}
+@-webkit-keyframes condemned_blink_effect { // for android
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+@keyframes condemned_blink_effect {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+#borderimg1 {
+  border: 5px solid transparent;
+  padding: 1px;
+  border-image: url("images/5.png") 30% round;
+}
+
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom:50px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 100px;background: ;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body  >
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <a href="home.html"> <img src="images/logo.png" style="width:100%" >
+  <a href="home.html" class="w3-bar-item w3-button w3-padding-large ">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-picture-o w3-xxlarge"></i>
+    <p>Gallery</p>
+  </a>
+
+  <a href="events.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-trophy w3-xxlarge"></i>
+    <p>Events</p>
+  </a>
+  <a href="nboard.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-pencil-square-o w3-xxlarge"></i>
+    <p>Notice Board</p>
+  </a>
+
+  <a href="https://www.google.co.in/maps/place/Swarna+Bharathi+Institute+of+Science+and+Technology/@17.2323702,80.1605549,17z/data=!3m1!4b1!4m5!3m4!1s0x3a345760d4485731:0xbd6efd5c0b30441!8m2!3d17.2323702!4d80.1627436?hl=en" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-map-marker w3-xxlarge"></i>
+    <p>Locate</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="home.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="events.html" class="w3-bar-item w3-button" style="width:25% !important">EVENTS</a>
+    <a href="gallery.html" class="w3-bar-item w3-button" style="width:25% !important">GALLERY</a>
+    <a href="https://www.google.co.in/maps/place/Swarna+Bharathi+Institute+of+Science+and+Technology/@17.2323702,80.1605549,17z/data=!3m1!4b1!4m5!3m4!1s0x3a345760d4485731:0xbd6efd5c0b30441!8m2!3d17.2323702!4d80.1627436?hl=en" class="w3-bar-item w3-button" style="width:25% !important">LOCATE</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-0 w3-center  id="home">
+    <h1 class="w3-jumbo"><img src="images/main.jpg" alt="banner" class="w3-image" height="250px" width="1350" ></img></span> </h1>
+   <p><u><marquee><font color="blue">Welcome to Swarna Bharathi Institue of Science and Technology</font></marquee></u></p>
+   
+<div class="w3-padding-3 w3-content" id="photos">
+    <h2 class="w3-text-light-grey"><font color="gold"><u>EVENTS</u></font></h2>
+        
+      <div class="w3-half">
+	  
+        <video width="420" height="240" id="borderimg1" controls>
+  <source src="vedios/clip.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+		<i>Chairman sir giving speech to the sbit students</i><br><br><br>
+        <img src="images/9.jpg" id="borderimg1"style="width:90%">
+		<i>Meeting conducted by eenadu group in sbit college</i><br><br><br>
+        <img src="images/12.jpg" id="borderimg1"style="width:90%">
+		<img src="images/4.jpg" id="borderimg1"style="width:90%">
+		<img src="images/5.png" id="borderimg1"style="width:90%">
+		<img src="images/6.jpg" id="borderimg1"style="width:90%">
+		<img src="images/7.jpg" id="borderimg1"style="width:90%">
+		<img src="images/8.jpg" id="borderimg1"style="width:90%">
+
+      </div>
+	  
+	  
+
+      <div class="w3-quarter">
+        <marquee direction="down" height="2000px" behavior="scroll" scrollamount="3"   onmouseover="this.stop();" onmouseout="this.start();" style="border:BROWN 2px SOLID" width="250px">
+		<p><i>Speech by RJC.Krishna garu..</i></p>
+		<img src="images/1.jpg" id="borderimg1"style="width:100%">
+		<p><i><u>RJC Krishna garu talking to the donor</u></i></p>
+		
+        <img src="images/4.jpg" id="borderimg1"style="width:100%">
+		<p><i><u>Blood donation by our college student</u></i></p>
+        <img src="images/18.jpg" id="borderimg1"style="width:100%">
+		<img src="images/17.jpg" id="borderimg1"style="width:100%">
+		<img src="images/19.jpg" id="borderimg1"style="width:100%">
+		<img src="images/20.jpg" id="borderimg1"style="width:100%"><br>
+		
+		<img src="images/21.jpg"id="borderimg1" style="width:100%">
+		<i><u>Speech by RJC.Krishna garu..</u></i></marquee>
+        
+      </div>
+
+	  <div class="w3-quarter">
+        <marquee direction="down" height="2000px" behavior="scroll" scrollamount="5"   onmouseover="this.stop();" onmouseout="this.start();" style="border:BLACK 2px SOLID" width="250px">
+		<p><i>Speech by RJC.Krishna garu..</i></p>
+		<img src="images/2.jpg" id="borderimg1"style="width:100%">
+		<p><i><u>RJC Krishna garu talking to the donor</u></i></p>
+		
+        <img src="images/8.jpg" id="borderimg1"style="width:100%">
+		<i>Blood donation by our college student</i>
+        <img src="images/9.jpg" id="borderimg1"style="width:100%">
+		<img src="images/4.jpg" id="borderimg1"style="width:100%">
+		<img src="images/15.jpg" id="borderimg1"style="width:100%">
+		<img src="images/12.jpg" id="borderimg1"style="width:100%">
+		
+		<img src="images/11.jpg" id="borderimg1"style="width:100%">Chairman sir meeting with P.ajay kumar garu</marquee>
+        
+      </div>
+	 
+
+
+	<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "inline";
+  setTimeout(carousel, 1500); // Change image every 2 seconds
+}
+</script>
+ 
+    
+	
+
+  </div>
+</div>
+
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey"><font color="gold">Contact us</font></h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></font></i> H.no.5-7-200/12, Pakabanda Street,Khammam-507002,Telangana</p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +91-8712712331,
++91-8712112331.</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: sbitengg@gmail.com</p>
+    </div><br>
+    
+
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Maintained by <a  target="_blank" class="w3-hover-text-green">WEB-TEAM,CSE department</a></p>
+    
+  </footer>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
